@@ -3,13 +3,23 @@ import styled from "styled-components";
 function Contact() {
   return (
     <Wrapper>
-      <h1>Contact us</h1>
-      <h2>BYITTEN DESIGN</h2>
-      <p>1000625101</p>
-      <p>120 Varna Dr.#412</p>
-      <p>Toronto - ON. M6A 1N3</p>
-      <h3>+1 (437) 499-0840</h3>
-      <p>itenfernanda@gmail.com</p>
+      <Contacts>
+        <h1>Contact us</h1>
+        <h2>BYITTEN DESIGN</h2>
+        <p>1000625101</p>
+        <p>120 Varna Dr.#412</p>
+        <p>Toronto - ON. M6A 1N3</p>
+        <h3>+1 (437) 499-0840</h3>
+        <p>itenfernanda@gmail.com</p>
+      </Contacts>
+
+      <Infos>
+        <p>
+          If you are looking for a painting company <br /> that delivers a service
+           with quality, professionalism, cleanliness and organization,
+          call us now and ask for a quote.
+        </p>
+      </Infos>
     </Wrapper>
   );
 }
@@ -17,9 +27,15 @@ function Contact() {
 export default Contact;
 
 const Wrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+`;
+
+const Contacts = styled.div`
   display: flex;
-  background-color: #191859;
+  background-color: #7fa653;
   flex-direction: column;
+  justify-content: center;
   height: 100vh;
   padding-left: 25px;
 
@@ -29,7 +45,6 @@ const Wrapper = styled.div`
     font-weight: 700;
     font-size: 45px;
     font-style: normal;
-    margin-top: 150px;
     margin-bottom: 15px;
   }
 
@@ -61,4 +76,17 @@ const Wrapper = styled.div`
     padding: 3px;
     margin-top: 20px;
   }
+`;
+
+const Infos = styled.div`
+  display: flex;
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  color: #7fa653;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  font-style: normal;
 `;
